@@ -9,6 +9,7 @@ const ageInput = document.getElementById('age');
 const rangeElement = document.getElementById('range');
 const rangeLabel = document.getElementById('rangeLabel');
 const form = document.getElementById('form');
+const confirm = document.getElementById('confirm');
 const reset = document.getElementById('reset');
 const price = document.getElementById('price');
 
@@ -50,15 +51,28 @@ form.addEventListener("submit", function (event) {
     //arrotondamento del prezzo finale a 2 cifre decimali
     finalPrice = +finalPrice.toFixed(2);
 
+    //aggiornamento del testo nell'elemento dedicato al prezzo
     price.innerText = `il prezzo del biglietto è di ${finalPrice}€`
+
+    //switch della visibilità di pulsanti conferma e reset
+    reset.classList.toggle("d-none");
+    confirm.classList.toggle("d-none");
+
+    //disabilitazione degli input (fino al reset)
+    ageInput.setAttribute('disabled', true);
+    range.setAttribute('disabled', true);
 })
 
-//aggiunta evento al pulsante reset
+//aggiunta evento al pulsante reset, con rinizializzazione di ogni valore
 reset.addEventListener("click", function () {
     ageInput.value = "";
     range.value = 10;
     rangeLabel.innerText = 10;
     price.innerText = "";
+    reset.classList.toggle("d-none")
+    confirm.classList.toggle("d-none");
+    ageInput.removeAttribute('disabled');
+    range.removeAttribute('disabled');
 })
 
 
