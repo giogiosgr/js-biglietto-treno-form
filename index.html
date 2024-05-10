@@ -29,19 +29,19 @@
         crossorigin="anonymous"></script>
     <!-- embed JavaScript di Bootstrap -->
     <main>
-        <div class="container p-0">
-            <h2 class="mt-4">Calcolo del prezzo del biglietto</h2>
+        <div class="container bg-body-tertiary pt-4 pb-3">
+            <h2>Calcolo del prezzo del biglietto</h2>
             <!-- FORM -->
             <form id="form">
-                <div style="width: 20%">
-                    <label for="age" class="form-label fw-bold mt-4">Inserisci età del passeggero</label>
-                    <input id="age" name="firstname" type="number" class="form-control" placeholder="Inserisci l'età"
+                <div style="width: 20%;">
+                    <label for="age" class="form-label fw-medium mt-4">Inserisci età del passeggero</label>
+                    <input type="number" id="age" name="firstname" class="form-control" placeholder="Inserisci l'età"
                         min="3" max="99" required>
                 </div>
-                <div style="width: 60%">
-                    <label for="range" class="form-label fw-bold mt-4">Chilometri: <span class="fw-bold"
+                <div style="width: 60%;">
+                    <label for="range" class="form-label fw-medium mt-4">Chilometri: <span class="fw-bold"
                             id="rangeLabel"></span></label>
-                    <input id="range" type="range" class="form-range" min="10" max="500" value="10">
+                    <input type="range" id="range" class="form-range" min="10" max="500" value="10">
                 </div>
                 <div class="d-flex mt-4">
                     <button id="confirm" class="btn btn-primary">Conferma</button>
@@ -49,7 +49,15 @@
             </form>
             <button id="reset" class="btn btn-primary d-none">Reset</button>
             <!-- FORM -->
-            <p id="price" class="mt-4"></p>
+            <!-- CONTENITORE DEL BIGLIETTO -->
+            <div class="container card mt-4" style="width: 18rem;">
+                <img src="img/trainlogo.png" class="card-img-top mt-2 m-auto" alt="logo" style="width:100px;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold text-center">IL TUO BIGLIETTO</h5>
+                    <p id="price" class="card-text fw-medium text-center"></p>
+                </div>
+            </div>
+            <!-- CONTENITORE DEL BIGLIETTO -->
         </div>
     </main>
     <script type=" text/javascript" src="JS/main.js"></script>

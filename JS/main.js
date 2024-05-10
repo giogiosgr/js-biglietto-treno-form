@@ -52,7 +52,7 @@ form.addEventListener("submit", function (event) {
     finalPrice = +finalPrice.toFixed(2);
 
     //aggiornamento del testo nell'elemento dedicato al prezzo
-    price.innerText = `il prezzo del biglietto è di ${finalPrice}€`
+    price.innerText = `prezzo: ${finalPrice}€`
 
     //switch della visibilità di pulsanti conferma e reset
     reset.classList.toggle("d-none");
