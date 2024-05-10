@@ -28,9 +28,35 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!-- embed JavaScript di Bootstrap -->
-
-    <script type="text/javascript" src="JS/main.js"></script>
-
+    <main>
+        <div class="container p-0">
+            <h2 class="mt-4">Calcolo prezzo del biglietto</h2>
+            <!-- FORM -->
+            <form id="form">
+                <div class="container">
+                    <div style="width: 20%">
+                        <label for="age" class="form-label fw-bold mt-4">Inserisci età del passeggero</label>
+                        <input id="age" name="firstname" type="number" class="form-control"
+                            placeholder="Inserisci l'età" required>
+                    </div>
+                    <div style="width: 60%">
+                        <label for="range" class="form-label mt-4">Inserisci KM: <span class="fw-bold"
+                                id="rangeLabel"></span></label>
+                        <input id="range" type="range" class="form-range" min="10" max="500" value="10">
+                    </div>
+                    <div class="d-flex mt-4">
+                        <button class="btn btn-primary">Conferma
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <!-- FORM -->
+            <p id="price" class="mt-4"></p>
+            <button id="reset" class="btn btn-primary mt-3">Reset
+            </button>
+        </div>
+    </main>
+    <script type=" text/javascript" src="JS/main.js"></script>
 </body>
 
 </html>
