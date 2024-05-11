@@ -44,21 +44,21 @@
                     <input type="range" id="range" class="form-range" min="10" max="500" value="10">
                 </div>
                 <div class="d-flex mt-4">
-                    <button id="confirm" class="btn btn-primary">Conferma</button>
+                    <button id="confirm" class="btn btn-primary" style="width: 12rem;">GENERA BIGLIETTO</button>
                 </div>
             </form>
-            <button id="reset" class="btn btn-primary d-none">Reset</button>
+            <button id="reset" class="btn btn-primary d-none" style="width: 12rem;">RESET</button>
             <!-- FORM -->
-            <!-- CONTENITORE DEL BIGLIETTO -->
-            <div class="container card mt-4" style="width: 18rem;">
-                <img src="img/trainlogo.png" class="card-img-top mt-2 m-auto" alt="logo" style="width:100px;">
-                <div class="card-body">
-                    <h5 class="card-title fw-bold text-center">IL TUO BIGLIETTO</h5>
-                    <p id="price" class="card-text fw-medium text-center"></p>
-                </div>
-            </div>
-            <!-- CONTENITORE DEL BIGLIETTO -->
         </div>
+        <!-- CONTENITORE DEL BIGLIETTO -->
+        <div id="ticket" class="container card mt-4 bg-danger d-none" style="width: 18rem;">
+            <img src="img/trainlogo.png" class="card-img-top mt-2 m-auto" alt="logo" style="width:100px;">
+            <div class="card-body">
+                <h5 class="card-title fw-bold text-center text-warning">IL TUO BIGLIETTO</h5>
+                <p id="price" class="card-text fw-medium text-center text-warning"></p>
+            </div>
+        </div>
+        <!-- CONTENITORE DEL BIGLIETTO -->
     </main>
     <script type=" text/javascript" src="JS/main.js"></script>
 </body>

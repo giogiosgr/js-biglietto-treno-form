@@ -12,6 +12,7 @@ const form = document.getElementById('form');
 const confirm = document.getElementById('confirm');
 const reset = document.getElementById('reset');
 const price = document.getElementById('price');
+const ticket = document.getElementById('ticket');
 
 //inizializzazione testo della label del range con valore di default
 rangeLabel.innerText = range.value;
@@ -54,9 +55,10 @@ form.addEventListener("submit", function (event) {
     //aggiornamento del testo nell'elemento dedicato al prezzo
     price.innerText = `prezzo: ${finalPrice}€`
 
-    //switch della visibilità di pulsanti conferma e reset
+    //switch della visibilità degli elementi (pulsanti, biglietto)
     reset.classList.toggle("d-none");
     confirm.classList.toggle("d-none");
+    ticket.classList.toggle("d-none");
 
     //disabilitazione degli input (fino al reset)
     ageInput.setAttribute('disabled', true);
@@ -71,6 +73,7 @@ reset.addEventListener("click", function () {
     price.innerText = "";
     reset.classList.toggle("d-none")
     confirm.classList.toggle("d-none");
+    ticket.classList.toggle("d-none");
     ageInput.removeAttribute('disabled');
     range.removeAttribute('disabled');
 })
