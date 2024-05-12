@@ -28,15 +28,28 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!-- embed JavaScript di Bootstrap -->
+    <header>
+        <nav class="navbar bg-dark">
+            <div class="container p-0">
+                <h1 class="text-success m-0">Calcolo del prezzo del biglietto</h1>
+            </div>
+        </nav>
+    </header>
     <main>
-        <div class="container bg-body-tertiary pt-4 pb-3">
-            <h2>Calcolo del prezzo del biglietto</h2>
+        <div class="container bg-body-tertiary py-3 mt-4">
+            <h2>Condizioni economiche:</h2>
+            <ul class="list-group text-warning">
+                <li class="list-group-item fw-medium text-danger" style="width: 20rem;">Minorenni: sconto del 20%</li>
+                <li class="list-group-item fw-medium text-warning" style="width: 20rem;">Over 65: sconto del 40%</li>
+                <li class="list-group-item fw-medium text-success" style="width: 20rem;">Bambini gratis fino a 3 anni.
+                </li>
+            </ul>
             <!-- FORM -->
             <form id="form">
                 <div>
                     <label for="age" class="form-label fw-medium mt-4">Inserisci età del
-                        passeggero</label>
-                    <input type="number" id="age" name="firstname" class="form-control" placeholder="anni" min="3"
+                        passeggero:</label>
+                    <input type="number" id="age" name="firstname" class="form-control" placeholder="anni" min="4"
                         max="99" required style="width: 20%;">
                 </div>
                 <div>
@@ -51,16 +64,16 @@
             </form>
             <button id="reset" class="btn btn-primary d-none" style="width: 12rem;">RESET</button>
             <!-- FORM -->
-        </div>
-        <!-- CONTENITORE DEL BIGLIETTO -->
-        <div id="ticket" class="container card mt-4 bg-danger d-none" style="width: 20rem;">
-            <img src="img/trainlogo.png" class="card-img-top mt-2 m-auto" alt="logo" style="width:100px;">
-            <div class="card-body">
-                <h5 class="card-title fw-bold text-center text-warning">IL TUO BIGLIETTO</h5>
-                <p id="price" class="card-text fw-medium text-center text-warning"></p>
+            <!-- CONTENITORE DEL BIGLIETTO -->
+            <div id="ticket" class="container card bg-danger mt-5 d-none" style="width: 20rem;">
+                <img src="img/trainlogo.png" class="card-img-top mt-2 m-auto" alt="logo" style="width:100px;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold text-center text-warning">IL TUO BIGLIETTO</h5>
+                    <p id="price" class="card-text fw-bold  fw-medium text-center text-warning"></p>
+                </div>
             </div>
+            <!-- CONTENITORE DEL BIGLIETTO -->
         </div>
-        <!-- CONTENITORE DEL BIGLIETTO -->
     </main>
     <script type=" text/javascript" src="JS/main.js"></script>
 </body>
