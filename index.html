@@ -29,19 +29,24 @@
         crossorigin="anonymous"></script>
     <!-- embed JavaScript di Bootstrap -->
     <header>
-        <nav class="navbar bg-dark">
-            <div class="container p-0">
-                <h1 class="text-success m-0">Calcolo del prezzo del biglietto</h1>
-            </div>
-        </nav>
+        <div class="container p-0">
+            <nav class="navbar bg-dark">
+                <div class=" container">
+                    <h1 class="m-0" style="color: #E3EDF3">Calcolo del prezzo del biglietto</h1>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
-        <div class="container bg-body-tertiary py-3 mt-4">
+        <div class=" container py-3" style="background-color: #F4F7F9">
             <h2>Condizioni economiche:</h2>
             <ul class="list-group text-warning">
-                <li class="list-group-item fw-medium text-danger" style="width: 20rem;">Minorenni: sconto del 20%</li>
-                <li class="list-group-item fw-medium text-warning" style="width: 20rem;">Over 65: sconto del 40%</li>
-                <li class="list-group-item fw-medium text-success" style="width: 20rem;">Bambini gratis fino a 3 anni.
+                <li class="list-group-item fw-medium text-danger" style="width: 20rem;">Minorenni: sconto
+                    del 20%</li>
+                <li class="list-group-item fw-medium text-warning" style="width: 20rem;">Over 65: sconto del
+                    40%</li>
+                <li class="list-group-item fw-medium text-success" style="width: 20rem;">Bambini gratis fino
+                    a 3 anni.
                 </li>
             </ul>
             <!-- FORM -->
@@ -53,13 +58,14 @@
                         max="99" required style="width: 20%;">
                 </div>
                 <div>
-                    <label for="range" class="form-label fw-medium mt-4">Chilometri: <span class="fw-bold"
+                    <label for="range" class="form-label fw-medium mt-4">Chilometri da percorrere: <span class="fw-bold"
                             id="rangeLabel"></span></label>
                     <input type="range" id="range" class="form-range d-block" min="10" max="500" value="10"
                         style="width: 60%;">
                 </div>
                 <div class=" d-flex mt-4">
-                    <button id="confirm" class="btn btn-primary" style="width: 12rem;">GENERA BIGLIETTO</button>
+                    <button id="confirm" class="btn btn-primary" style="width: 12rem;">GENERA
+                        BIGLIETTO</button>
                 </div>
             </form>
             <button id="reset" class="btn btn-primary d-none" style="width: 12rem;">RESET</button>
