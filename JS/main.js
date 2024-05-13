@@ -55,27 +55,25 @@ form.addEventListener("submit", function (event) {
     //aggiornamento del testo nell'elemento dedicato al prezzo
     price.innerText = `prezzo: ${finalPrice}€`
 
-    //switch della visibilità degli elementi (pulsanti, biglietto)
-    reset.classList.toggle("d-none");
-    confirm.classList.toggle("d-none");
-    ticket.classList.toggle("d-none");
+    //il biglietto viene reso visibile
+    ticket.classList.remove("d-none");
 
     //disabilitazione degli input (fino al reset)
     ageInput.setAttribute('disabled', true);
     range.setAttribute('disabled', true);
+    confirm.setAttribute('disabled', true);
 })
 
-//aggiunta evento al pulsante reset, con rinizializzazione di ogni valore
+//aggiunta evento al "pulsante" reset, con rinizializzazione dei valori
 reset.addEventListener("click", function () {
     ageInput.value = "";
     range.value = 10;
     rangeLabel.innerText = 10;
     price.innerText = "";
-    reset.classList.toggle("d-none")
-    confirm.classList.toggle("d-none");
-    ticket.classList.toggle("d-none");
+    ticket.classList.add("d-none");
     ageInput.removeAttribute('disabled');
     range.removeAttribute('disabled');
+    confirm.removeAttribute('disabled');
 })
 
 
