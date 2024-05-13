@@ -38,17 +38,19 @@
         </div>
     </header>
     <main>
-        <div class=" container py-3" style="background-color: #F4F7F9">
-            <h2>Offerte:</h2>
-            <ul class="list-group text-warning">
-                <li class="list-group-item fw-bold text-danger" style="width: 20rem;">Minorenni: sconto
-                    del 20%</li>
-                <li class="list-group-item fw-bold text-warning" style="width: 20rem;">Over 65: sconto del
-                    40%</li>
-                <li class="list-group-item fw-bold text-success" style="width: 20rem;">Bambini gratis fino
-                    a 3 anni.
-                </li>
-            </ul>
+        <div class="container py-3" style="background-color: #F4F7F9">
+            <div id="discountLabel" class="btn ps-0">
+                <h2 style="color: #dc3545">Offerte (clicca per visualizzare)</h2>
+                <ul id="discountList" class="list-group text-warning d-none">
+                    <li class="list-group-item fw-bold text-success">Minorenni: sconto
+                        del 20%</li>
+                    <li class="list-group-item fw-bold text-warning">Over 65: sconto del
+                        40%</li>
+                    <li class="list-group-item fw-bold text-danger">Bambini: gratis fino
+                        a 3 anni compiuti.
+                    </li>
+                </ul>
+            </div>
             <!-- FORM -->
             <form id="form">
                 <div>

@@ -13,16 +13,23 @@ const confirm = document.getElementById('confirm');
 const reset = document.getElementById('reset');
 const price = document.getElementById('price');
 const ticket = document.getElementById('ticket');
+const discountLabel = document.getElementById('discountLabel');
+const discountList = document.getElementById('discountList');
 
 //inizializzazione testo della label del range con valore di default
 rangeLabel.innerText = range.value;
 
-//variabile con il costo unitario al kilometro
-const KMcost = 0.21
+//variabile con il costo unitario al chilometro
+const KMcost = 0.21;
 
 //aggiunta evento per mostrare il valore del range input nella sua label
 range.addEventListener("change", function () {
     rangeLabel.innerText = range.value;
+})
+
+//aggiunta evento per visualizzare o meno le offerte al click del mouse
+discountLabel.addEventListener("click", function () {
+    discountList.classList.toggle("d-none");
 })
 
 //aggiunta evento al submit per ricavare i valori di input ed effettuare i calcoli
@@ -75,10 +82,3 @@ reset.addEventListener("click", function () {
     range.removeAttribute('disabled');
     confirm.removeAttribute('disabled');
 })
-
-
-
-
-
-
-
